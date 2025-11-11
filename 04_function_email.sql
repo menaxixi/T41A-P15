@@ -1,0 +1,6 @@
+CREATE OR REPLACE FUNCTION valida_correo(correo TEXT)
+RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN correo LIKE '%@%';
+END;
+$$ LANGUAGE plpgsql;
