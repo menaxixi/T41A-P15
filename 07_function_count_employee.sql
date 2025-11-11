@@ -1,0 +1,6 @@
+CREATE OR REPLACE FUNCTION empXdep(id_d INT)
+RETURNS INT AS $$
+BEGIN
+   RETURN (SELECT COUNT(*) FROM empleado WHERE id_dep=id_d);
+END;
+$$ LANGUAGE plpgsql;
