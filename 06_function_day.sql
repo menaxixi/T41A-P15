@@ -1,0 +1,6 @@
+CREATE OR REPLACE FUNCTION devolver_dia(fecha DATE)
+RETURNS TEXT AS $$
+BEGIN
+  RETURN TO_CHAR(fecha, 'Day');
+END;
+$$ LANGUAGE plpgsql;
